@@ -1,0 +1,8 @@
+.btn-primary {
+    background-color: coral !important;
+    border-color: coral !important;
+}
+
+.panel-heading {
+    font-size: 150%;
+}
