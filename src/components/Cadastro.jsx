@@ -1,9 +1,14 @@
 import { Component } from "react";
 
 export class Cadastro extends Component {
+
+  saveAndContinue = (e) => {
+    e.preventDefault()
+    this.props.nextStep()
+  }
     render() {
         return (
-        <form className="form-horizontal">          
+        <form className="form-horizontal"  onSubmit={this.saveAndContinue}>          
             <div className="container col-10">
               <div className="row justify-content-center">
                   <h3 className="mt-4"><center>Ficha de atendimento</center></h3>
@@ -290,10 +295,12 @@ export class Cadastro extends Component {
                 </div>
               </div>
 
-              <div className="row mt-4 mb-4 justify-content-center">
-                <div className="col-5 text-center">
-                    <button className="btn btn-success mr-2" type="Submit">Cadastrar</button>
-                    <button className="btn btn-danger"  type="Reset">Cancelar</button>
+              <div className="row mt-4 mb-4 justify-content-between">
+                <div className="col-5 text-left">
+                  <button className="btn btn-secondary" type="Reset">Apagar</button>
+                </div>
+                <div className="col-5 text-right">
+                    <button className="btn btn-primary" type="Submit">Próximo</button>
                 </div>
               </div>
             </div>
